@@ -43,7 +43,6 @@
 }
 
 .text {
-    height: 397px;
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: normal;
@@ -60,11 +59,15 @@
 }
 
 .advert {
+    background-image: url('http://via.placeholder.com/450x375');
     width: 450px;
     height: 375px;
-    background-image: url('http://images.thebicyclelounge.co.uk/product-images/530-1000/E-119_A18_2016_dura-ace_11.jpg')
 }
 
+.avatar {
+    border-radius: 50%;
+    width:100px;
+}
 .initial-spinner {
     width: 40px;
     height: 40px;

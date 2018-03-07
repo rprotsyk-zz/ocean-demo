@@ -18,6 +18,7 @@ import {
 } from '@angular/material';
 import 'hammerjs';
 import { MnFullpageModule } from 'ngx-fullpage';
+import { ChartsModule } from 'ng2-charts';
 
 import { NotifyModule } from 'notify-angular';
 
@@ -53,6 +54,7 @@ import { SharedModule } from './shared/shared.module';
     OceanModule.forRoot(),
     FlexLayoutModule,
     SharedModule,
+    ChartsModule,
     SpinnerModule.forRoot({
       animation: 'spin 1s ease-in-out infinite',
       primaryColor: '#3F51B5',

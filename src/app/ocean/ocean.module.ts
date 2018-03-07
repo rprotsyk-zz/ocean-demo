@@ -16,13 +16,15 @@ import { OceanStoreService } from './ocean.store';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '../shared/shared.module';
 import { SpacerComponent } from '../spacer/spacer.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     FlexLayoutModule,
-    SharedModule
+    SharedModule,
+    ChartsModule
   ],
   declarations: [
     OceanProfileComponent,
