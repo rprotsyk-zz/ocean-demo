@@ -1,5 +1,14 @@
-<div class="text-container">
-    <div class="header-small">
+<div class="text-container" fxLayout="row">
+    <div class="header-small" fxFlex="50">
         TRY YOURSELF
     </div>
+    <div fxFlex="50">
+        <mat-form-field color='black'>
+            <input color='black' matInput placeholder="Enter your twitter name"
+             [(ngModel)]="twitterName" name="twitterName" />
+        </mat-form-field>
+    </div>
+</div>
+<div fxFlexAlign="center">
+     Your similar persona is: 
 </div>
