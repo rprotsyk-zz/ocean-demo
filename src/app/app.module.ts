@@ -7,6 +7,9 @@ import {LandingComponent} from './landing/landing.component';
 import {PersonaIntroComponent} from './persona-intro/persona-intro.component';
 import {SpacerComponent} from './spacer/spacer.component';
 
+import { ConsumersBehaviorComponent } from '../app/consumers-behavior/consumers-behavior.component';
+import { SocialMediaComponent } from '../app/social-media/social-media.component';
+
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -28,7 +31,9 @@ import {SpinnerModule} from 'spinner-angular';
     AppComponent,
     LandingComponent,
     PersonaIntroComponent,
-    SpacerComponent
+    SpacerComponent,
+    ConsumersBehaviorComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,
