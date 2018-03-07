@@ -14,6 +14,7 @@ import {
   MatIconModule
 } from '@angular/material';
 import 'hammerjs';
+import { MnFullpageModule } from 'ngx-fullpage';
 
 import { NotifyModule } from 'notify-angular';
 
@@ -41,6 +42,7 @@ import {SpinnerModule} from 'spinner-angular';
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
+    MnFullpageModule.forRoot(),
     NotifyModule.forRoot(),
     OceanModule.forRoot(),
     SpinnerModule.forRoot({
