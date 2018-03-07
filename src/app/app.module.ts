@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {AppRoutingModule} from './app-routing.module';
-import {LandingComponent} from './landing/landing.component';
-import {PersonaIntroComponent} from './persona-intro/persona-intro.component';
-import {SpacerComponent} from './spacer/spacer.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { AppRoutingModule } from './app-routing.module';
+import { LandingComponent } from './landing/landing.component';
+import { PersonaIntroComponent } from './persona-intro/persona-intro.component';
 
 import { ConsumersBehaviorComponent } from '../app/consumers-behavior/consumers-behavior.component';
 import { SocialMediaComponent } from '../app/social-media/social-media.component';
 
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatInputModule, MatCardModule, MatButtonModule, MatToolbarModule, MatMenuModule,
   MatIconModule
@@ -21,19 +21,20 @@ import { MnFullpageModule } from 'ngx-fullpage';
 
 import { NotifyModule } from 'notify-angular';
 
-import {OceanModule} from './ocean/ocean.module';
-import {environment} from '../environments/environment';
+import { OceanModule } from './ocean/ocean.module';
+import { environment } from '../environments/environment';
 
-import {SpinnerModule} from 'spinner-angular';
+import { SpinnerModule } from 'spinner-angular';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     PersonaIntroComponent,
-    SpacerComponent,
     ConsumersBehaviorComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    PersonaIntroComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +51,8 @@ import {SpinnerModule} from 'spinner-angular';
     MnFullpageModule.forRoot(),
     NotifyModule.forRoot(),
     OceanModule.forRoot(),
+    FlexLayoutModule,
+    SharedModule,
     SpinnerModule.forRoot({
       animation: 'spin 1s ease-in-out infinite',
       primaryColor: '#3F51B5',
