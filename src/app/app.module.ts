@@ -8,6 +8,7 @@ import { LandingComponent } from './landing/landing.component';
 import { PersonaIntroComponent } from './persona-intro/persona-intro.component';
 
 import { ConsumersBehaviorComponent } from '../app/consumers-behavior/consumers-behavior.component';
+import { ConsumersProfileComponent } from '../app/consumers-profile/consumers-profile.component';
 import { SocialMediaComponent } from '../app/social-media/social-media.component';
 
 import { AppComponent } from './app.component';
@@ -35,7 +36,8 @@ import { SharedModule } from './shared/shared.module';
     PersonaIntroComponent,
     ConsumersBehaviorComponent,
     SocialMediaComponent,
-    PersonaIntroComponent
+    PersonaIntroComponent,
+    ConsumersProfileComponent
   ],
   imports: [
     BrowserModule,
