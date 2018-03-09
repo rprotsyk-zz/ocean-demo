@@ -27,6 +27,8 @@ import { environment } from '../environments/environment';
 
 import { SpinnerModule } from 'spinner-angular';
 import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SpacerComponent } from './spacer/spacer.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +37,11 @@ import { SharedModule } from './shared/shared.module';
     PersonaIntroComponent,
     ConsumersBehaviorComponent,
     SocialMediaComponent,
-    PersonaIntroComponent
+    PersonaIntroComponent,
+    SpacerComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,

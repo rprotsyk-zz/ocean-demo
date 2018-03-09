@@ -2,6 +2,7 @@
     font-size: 100%;
     font-family: 'Proxima Nova';
 }
+
 .header {
     height: 122px;
     font-family: 'Proxima Nova';
@@ -58,17 +59,28 @@
     padding-left: 42px;
 }
 
+.horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-center {
+    display: flex; 
+    align-items: center;
+}
+
 .advert {
-    background-image: url('http://via.placeholder.com/450x375');
     width: 450px;
+    min-width: 450px;
     height: 375px;
-    margin-left: 42px;
+    margin: 0 44px;
 }
 
 .avatar {
     border-radius: 50%;
     width: 80px;
 }
+
 .initial-spinner {
     width: 40px;
     height: 40px;

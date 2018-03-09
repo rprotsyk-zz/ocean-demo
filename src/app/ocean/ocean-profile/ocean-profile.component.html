@@ -6,33 +6,39 @@
          <app-avatar></app-avatar>
     </div>
 </div>
-<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="42px">
-    <div class="advert text-container">
-        
+<div fxLayout="row">
+    <div class="advert vertical-center">
+    <img [src]="profileAdvertBackground" />
+        <div class="horizontal-center" *ngIf="loading">
+        <mat-spinner></mat-spinner>
+        </div>
     </div>
-    <div fxFlex="50">
-        <div fxLayout="column">
-        <div class="text-header">
-            Change the scores for each of the traits
-        </div>
-        <mat-slider class="default-slider" [max]="0.99" [min]="0.01" [step]="0.01">
-        </mat-slider>
-        <mat-slider [max]="0.99" [min]="0.01" [step]="0.01">
-        </mat-slider>
-        <mat-slider [max]="0.99" [min]="0.01" [step]="0.01">
-        </mat-slider>
-        <mat-slider [max]="0.99" [min]="0.01" [step]="0.01">
-        </mat-slider>
-        <mat-slider [max]="0.99" [min]="0.01" [step]="0.01">
-        </mat-slider>
-        </div>
+    <div class="vertical-center">
+        <div fxLayout="column" style="margin-left:0; margin-right:0;">
+         
+            <div class="text-header" style="margin-bottom:50px;">
+                Change the scores for each of the traits
+            </div>
+            
+            <div>{{score.scores[0]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[0]" [max]="99" [min]="1" [step]="1">
+            </mat-slider>
+            <div>{{score.scores[1]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[1]" [max]="99" [min]="1" [step]="1">
+            </mat-slider>
+            <div>{{score.scores[2]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[2]" [max]="99" [min]="1" [step]="1">
+            </mat-slider>
+            <div>{{score.scores[3]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[3]" [max]="99" [min]="1" [step]="1">
+            </mat-slider>
+            <div>{{score.scores[4]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[4]" [max]="99" [min]="1" [step]="1">
+            </mat-slider>
+            </div>
+
     </div>
 </div>
 <div class="text-container">
     <div class="text-header">
         Description
     </div>
-    <div class="text">
+    <div class="text" style="margin-bottom:30px;">
         Michael is demanding and meticulous person. Michael works as a senior regional manager in the logistics company. Michaels
         position in the company implies a lot of business traveling to coordinate shipping and logistics throughout the Western
         regions of US. In college Michael played in College football league and he still enjoys playing football with friends

@@ -10,12 +10,15 @@ import { OceanStoreService } from '../ocean.store';
 export class OceanTwitterComponent implements OnInit {
   // Radar
   public radarChartLabels: string[] = ['Openness', 'Conscientiousness',
-  'Extraversion', 'Agreeableness', 'Neuroticism'];
+    'Extraversion', 'Agreeableness', 'Neuroticism'];
 
   public radarChartData: any = [
-    { data: [50, 50, 30, 20, 40], label: '' }
+    { data: [30, 20, 50, 20, 10], label: '' }
   ];
   public radarChartType = 'radar';
+  public loading = false;
+  public oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
+  public twitterName = 'elon_mask';
 
   constructor(
     private oceanService: OceanService,
@@ -23,6 +26,25 @@ export class OceanTwitterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+  }
+
+  public getOcean() {
+    this.loading = true;
+    this.oceanAdvertBackground = '';
+    this.oceanService.getOcean(this.twitterName)
+    .subscribe(val => {
+      this.loading = false;
+      console.log(val);
+      this.oceanAdvertBackground =  'https://picsum.photos/450/375/?random';
+    },
+    error => {
+      this.radarChartData = [
+        { data: [10, 20, 10, 20, 30], label: '' }
+      ];
+      this.loading = false;
+      console.log('ERRROR');
+      this.oceanAdvertBackground =  'https://picsum.photos/450/375/?random';
+    });
   }
 
   public chartClicked(e: any): void {
