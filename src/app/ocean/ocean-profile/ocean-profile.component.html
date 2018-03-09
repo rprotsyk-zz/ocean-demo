@@ -17,18 +17,19 @@
         <div fxLayout="column" style="margin-left:0; margin-right:0;">
          
             <div class="text-header" style="margin-bottom:50px;">
-                Change the scores for each of the traits
+                Change the scores for each of <br>the traits
             </div>
-            
-            <div>{{score.scores[0]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[0]" [max]="99" [min]="1" [step]="1">
+            <div>
+            </div>
+            <div>{{score.scores[0]}} Openness</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[0]" [max]="99" [min]="1" [step]="1">
             </mat-slider>
-            <div>{{score.scores[1]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[1]" [max]="99" [min]="1" [step]="1">
+            <div>{{score.scores[1]}} Conscientiousness</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[1]" [max]="99" [min]="1" [step]="1">
             </mat-slider>
-            <div>{{score.scores[2]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[2]" [max]="99" [min]="1" [step]="1">
+            <div>{{score.scores[2]}} Extraversion</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[2]" [max]="99" [min]="1" [step]="1">
             </mat-slider>
-            <div>{{score.scores[3]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[3]" [max]="99" [min]="1" [step]="1">
+            <div>{{score.scores[3]}} Agreeableness</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[3]" [max]="99" [min]="1" [step]="1">
             </mat-slider>
-            <div>{{score.scores[4]}}</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[4]" [max]="99" [min]="1" [step]="1">
+            <div>{{score.scores[4]}} Neuroticism</div><mat-slider (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[4]" [max]="99" [min]="1" [step]="1">
             </mat-slider>
             </div>
 

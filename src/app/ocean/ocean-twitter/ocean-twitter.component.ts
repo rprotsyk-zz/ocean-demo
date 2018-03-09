@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OceanService } from '../ocean.service';
 import { OceanStoreService } from '../ocean.store';
+import { Color } from "ng2-charts";
 
 @Component({
   selector: 'app-ocean-twitter',
@@ -13,12 +14,27 @@ export class OceanTwitterComponent implements OnInit {
     'Extraversion', 'Agreeableness', 'Neuroticism'];
 
   public radarChartData: any = [
-    { data: [30, 20, 50, 20, 10], label: '' }
+    { data: [30, 20, 50, 20, 10], label: '', legend: {
+      position: 'right',
+      labels: {
+        fontSize: 14
+      }
+  } }
   ];
   public radarChartType = 'radar';
   public loading = false;
   public oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
   public twitterName = 'elon_mask';
+  public chartColors: Array<Color> = [{
+    borderColor: 'black'
+  }];
+
+  public chartOptions = { scale: {
+      pointLabels: {
+        fontSize: 20
+      }
+    }
+  };
 
   constructor(
     private oceanService: OceanService,
@@ -53,5 +69,9 @@ export class OceanTwitterComponent implements OnInit {
 
   public chartHovered(e: any): void {
     console.log(e);
+  }
+
+  public scroll(el) {
+    el.scrollIntoView();
   }
 }
