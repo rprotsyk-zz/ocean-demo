@@ -14,26 +14,14 @@
     </div>
 </div>
 <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="42px">
-    <div class="advert">
+    <div class="advert text-container">
 
     </div>
     <div fxFlex="50">
         <div fxLayout="column">
-            <div fxLayout="row">
-                <div>
-                    <img class="avatar" src="https://i.pinimg.com/474x/4b/5d/19/4b5d1954fbb5b6bad18f0ac25c4ab3c3--free-avatars-create-your-own-avatar.jpg">
-                </div>
-                <div fxFlexAlign="center">
-                    <div>
-                        Name Surname
-                    </div>
-                    <div>
-                        age, proffession
-                    </div>
-                </div>
-            </div>
-            <div style="display: block">
-                <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)"
+            <app-avatar></app-avatar>
+            <div>
+                <canvas baseChart [datasets]="radarChartData" height="180" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)"></canvas>
             </div>
         </div>
@@ -54,7 +42,7 @@
     </div>
 </div>
 <div fxLayout="column">
-        <div fxFlexAlign="center">
-             <button  mat-raised-button>Go to top</button>
-        </div>
+    <div fxFlexAlign="center">
+        <button mat-raised-button class="default-button">Go to top</button>
     </div>
+</div>

@@ -17,6 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '../shared/shared.module';
 import { SpacerComponent } from '../spacer/spacer.component';
 import { ChartsModule } from 'ng2-charts';
+import { AvatarComponent } from './avatar/avatar.component';
 
 @NgModule({
   imports: [
@@ -28,11 +29,13 @@ import { ChartsModule } from 'ng2-charts';
   ],
   declarations: [
     OceanProfileComponent,
-    OceanTwitterComponent
+    OceanTwitterComponent,
+    AvatarComponent
   ],
   exports: [
     OceanProfileComponent,
-    OceanTwitterComponent
+    OceanTwitterComponent,
+    AvatarComponent
   ]
 })
 export class OceanModule {

@@ -62,11 +62,12 @@
     background-image: url('http://via.placeholder.com/450x375');
     width: 450px;
     height: 375px;
+    margin-left: 42px;
 }
 
 .avatar {
     border-radius: 50%;
-    width:100px;
+    width: 80px;
 }
 .initial-spinner {
     width: 40px;

@@ -13,7 +13,7 @@ export class OceanTwitterComponent implements OnInit {
   'Extraversion', 'Agreeableness', 'Neuroticism'];
 
   public radarChartData: any = [
-    { data: [50, 60, 70, 20, 40], label: '' }
+    { data: [50, 50, 30, 20, 40], label: '' }
   ];
   public radarChartType = 'radar';
 

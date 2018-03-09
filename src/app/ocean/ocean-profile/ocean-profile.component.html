@@ -2,20 +2,20 @@
     <div class="header-small" fxFlex="50">
         SEE THE DIFFERENCE
     </div>
-    <div class="header-small" fxFlex="50">
-        Name Surname
+    <div fxFlex="50">
+         <app-avatar></app-avatar>
     </div>
 </div>
 <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="42px">
-    <div class="advert">
+    <div class="advert text-container">
         
     </div>
     <div fxFlex="50">
         <div fxLayout="column">
-        <div>
+        <div class="text-header">
             Change the scores for each of the traits
         </div>
-        <mat-slider [max]="0.99" [min]="0.01" [step]="0.01">
+        <mat-slider class="default-slider" [max]="0.99" [min]="0.01" [step]="0.01">
         </mat-slider>
         <mat-slider [max]="0.99" [min]="0.01" [step]="0.01">
         </mat-slider>
