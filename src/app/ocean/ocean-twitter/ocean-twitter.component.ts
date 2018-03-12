@@ -22,7 +22,7 @@ export class OceanTwitterComponent implements OnInit {
   public radarChartType = 'radar';
   public loading = false;
   public oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
-  public twitterName = 'elon_mask';
+  public twitterName = 'elonmusk';
   public chartColors: Array<Color> = [{
     borderColor: '#d51b5d'
   }];
@@ -48,10 +48,18 @@ export class OceanTwitterComponent implements OnInit {
     this.loading = true;
     this.oceanAdvertBackground = '';
     this.oceanService.getOcean(this.twitterName)
-      .subscribe(val => {
+      .subscribe(response => {
+        if (response.scores.length > 0) {
+          this.radarChartData = [
+            { data: [response.scores[0].Score,
+              response.scores[1].Score,
+              response.scores[2].Score,
+              response.scores[3].Score,
+              response.scores[4].Score], label: '' }
+          ];
+        }
         this.loading = false;
-        console.log(val);
-        this.oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
+        this.oceanAdvertBackground = `/assets/img/ads/${response.prof}.png`;
       },
       error => {
         this.radarChartData = [
