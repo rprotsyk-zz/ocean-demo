@@ -1,37 +1,27 @@
-<div class="text-container" fxLayout="row">
-    <div class="header-small" fxFlex="50">
+<nav mat-tab-nav-bar class="topnav">
+    <div class="header-small vertical-center" fxFlex>
         TRY YOURSELF
     </div>
-    <div fxFlex="50">
-        <mat-form-field fxFlex="60" >
+    <div fxFlex class="vertical-center">
+        <mat-form-field fxFlex>
             <input class="input-twitter" matInput placeholder="Enter your twitter name" [(ngModel)]="twitterName" name="twitterName"
             />
         </mat-form-field>
-        <button mat-raised-button class="button-small" (click)="getOcean()">Send</button>
+        <button mat-raised-button class="button-small" (click)="getOcean()"></button>
     </div>
-</div>
-<div fxLayout="column">
-    <div fxFlexAlign="center" style="margin-bottom:30px;">
-        Your similar persona is:
-    </div>
-</div>
-<div fxLayout="row">
+</nav>
+
+<div fxLayout="row" style="padding-top:50px;">
     <div class="advert vertical-center">
         <img [src]="oceanAdvertBackground" />
         <div class="horizontal-center" *ngIf="loading">
             <mat-spinner></mat-spinner>
         </div>
     </div>
-    <div class="horizontal-center">
-        <div fxLayout="column" >
-            <app-avatar></app-avatar>
-            <div style="padding-left:-50px;">
-                <canvas baseChart [options]="chartOptions"
-                [colors]="chartColors" [datasets]="radarChartData" 
-                width="500" height="300" [labels]="radarChartLabels" 
-                [chartType]="radarChartType" (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)"></canvas>
-            </div>
+    <div class="vertical-center">
+        <div class="horizontal-center">
+            <canvas baseChart [options]="chartOptions" [colors]="chartColors" [datasets]="radarChartData" width="500" height="300" [labels]="radarChartLabels"
+                [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
         </div>
     </div>
 </div>
@@ -47,10 +37,5 @@
         financial status. Due to his work he is interested in online shopping and trusts certain brands. Michael believes
         that his spare time is priceless and doesn’t like spending too much time on shopping, so he values fast and clear
         experience when shopping online.
-    </div>
-</div>
-<div fxLayout="column">
-    <div fxFlexAlign="center">
-        <button mat-raised-button class="button-large" (click)="scroll(target)">Go to top</button>
     </div>
 </div>

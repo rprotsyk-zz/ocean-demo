@@ -1,3 +1,46 @@
-.sliders {
-    min-width: 200px;
+.metric {
+    width: 66px;
+    height: 19px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8c8c8c;
+    padding-left: 6px;
+}
+
+.metric-number {
+    width: 29px;
+    height: 29px;
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    padding: 17px 17px 0px 0px;
+}
+
+.metric-title {
+    width: 482px;
+    height: 62px;
+    font-family: 'Proxima Nova Bl';
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+.mat-slider-track-fill {
+    background-color:black;
 }

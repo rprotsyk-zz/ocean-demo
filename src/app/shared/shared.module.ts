@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatIconModule,
     MatTooltipModule,
     MatGridListModule,
-    MatSliderModule
+    MatSliderModule,
+    MatExpansionModule
   ],
   declarations: [
   ],
@@ -65,7 +67,8 @@ import { MatSliderModule } from '@angular/material/slider';
     MatIconModule,
     MatTooltipModule,
     MatGridListModule,
-    MatSliderModule
+    MatSliderModule,
+    MatExpansionModule
   ]
 })
 export class SharedModule {}

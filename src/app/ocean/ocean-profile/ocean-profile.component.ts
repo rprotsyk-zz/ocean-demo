@@ -9,7 +9,10 @@ import {OceanStoreService} from '../ocean.store';
 })
 export class OceanProfileComponent implements OnInit {
 
-  public score: Score = { scores : [50, 50, 50, 50, 50, 50] } ;
+  public score: Score = { scores : [50, 50, 50, 50, 50]};
+  public scoreLabels: string[] = ['Openness', 'Conscientiousness',
+    'Extraversion', 'Agreeableness', 'Neuroticism'];
+
   public loading = false;
   public profileAdvertBackground = 'https://picsum.photos/450/375/?random';
   constructor(

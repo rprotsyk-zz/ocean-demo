@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OceanService } from '../ocean.service';
 import { OceanStoreService } from '../ocean.store';
-import { Color } from "ng2-charts";
+import { Color } from 'ng2-charts';
 
 @Component({
   selector: 'app-ocean-twitter',
@@ -14,24 +14,24 @@ export class OceanTwitterComponent implements OnInit {
     'Extraversion', 'Agreeableness', 'Neuroticism'];
 
   public radarChartData: any = [
-    { data: [30, 20, 50, 20, 10], label: '', legend: {
-      position: 'right',
-      labels: {
-        fontSize: 14
-      }
-  } }
+    {
+      data: [30, 20, 50, 20, 10], label: '', borderWidth: '8',
+      pointStyle: 'circle'
+    }
   ];
   public radarChartType = 'radar';
   public loading = false;
   public oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
   public twitterName = 'elon_mask';
   public chartColors: Array<Color> = [{
-    borderColor: 'black'
+    borderColor: '#d51b5d'
   }];
 
-  public chartOptions = { scale: {
+  public chartOptions = {
+    scale: {
       pointLabels: {
-        fontSize: 20
+        fontSize: 14,
+        fontFamily: 'Open Sans'
       }
     }
   };
@@ -48,19 +48,19 @@ export class OceanTwitterComponent implements OnInit {
     this.loading = true;
     this.oceanAdvertBackground = '';
     this.oceanService.getOcean(this.twitterName)
-    .subscribe(val => {
-      this.loading = false;
-      console.log(val);
-      this.oceanAdvertBackground =  'https://picsum.photos/450/375/?random';
-    },
-    error => {
-      this.radarChartData = [
-        { data: [10, 20, 10, 20, 30], label: '' }
-      ];
-      this.loading = false;
-      console.log('ERRROR');
-      this.oceanAdvertBackground =  'https://picsum.photos/450/375/?random';
-    });
+      .subscribe(val => {
+        this.loading = false;
+        console.log(val);
+        this.oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
+      },
+      error => {
+        this.radarChartData = [
+          { data: [10, 20, 10, 20, 30], label: '' }
+        ];
+        this.loading = false;
+        console.log('ERRROR');
+        this.oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
+      });
   }
 
   public chartClicked(e: any): void {

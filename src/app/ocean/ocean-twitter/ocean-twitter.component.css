@@ -15,20 +15,20 @@
 }
 
 .button-small {
-    background-color:#4a90e2; 
+    font-family: 'Proxima Nova Bl';
+    height: 50px;
+    background: url(/assets/img/btn-go.svg);
+    padding-top: 2px;
+}
+
+.input-twitter {
     font-family: 'Proxima Nova Bl';
     font-size: 26px;
-    width: 134px;
-    height: 60px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center;
-    color: #ffffff;
-}
-
-.input-twitter {
-    font-size: 26px;
+    text-align: left;
+    color: #000000;
 }

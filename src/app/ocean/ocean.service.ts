@@ -18,13 +18,13 @@ export class OceanService {
     };
     console.log(user);
     return this.httpClient
-      .post('http://195.160.232.94:5656/get_ocean', request, { responseType: 'json' });
+      .post('https://cors-anywhere.herokuapp.com/http://195.160.232.94:5656/get_ocean', request, { responseType: 'json' });
   }
 
   public getProfile(scores: Score): Observable<any> {
     console.log(scores);
     return this.httpClient
-      .post('http://195.160.232.94:5656/get_profile', scores, { responseType: 'json' });
+      .post('https://cors-anywhere.herokuapp.com/http://195.160.232.94:5656/get_profile', scores, { responseType: 'json' });
   }
 }
 
