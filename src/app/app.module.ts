@@ -10,6 +10,7 @@ import { PersonaIntroComponent } from './persona-intro/persona-intro.component';
 import { ConsumersBehaviorComponent } from '../app/consumers-behavior/consumers-behavior.component';
 import { ConsumersProfileComponent } from '../app/consumers-profile/consumers-profile.component';
 import { SocialMediaComponent } from '../app/social-media/social-media.component';
+import { SectionHeaderComponent } from '../app/section-header/section-header.component';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,7 +41,8 @@ import { SpacerComponent } from './spacer/spacer.component';
     SocialMediaComponent,
     PersonaIntroComponent,
     ConsumersProfileComponent,
-    SpacerComponent
+    SpacerComponent,
+    SectionHeaderComponent
   ],
   imports: [
     HttpClientModule,
