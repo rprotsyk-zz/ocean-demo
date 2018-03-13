@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OceanService } from '../ocean.service';
 import { OceanStoreService } from '../ocean.store';
 import { Color } from 'ng2-charts';
-import { Profile } from "../ocean-profile/ocean-profile.component";
+import { Profile } from '../ocean-profile/ocean-profile.component';
 
 @Component({
   selector: 'app-ocean-twitter',
