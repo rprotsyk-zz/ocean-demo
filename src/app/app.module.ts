@@ -41,9 +41,9 @@ import { SpacerComponent } from './spacer/spacer.component';
     SocialMediaComponent,
     PersonaIntroComponent,
     ConsumersProfileComponent,
-    SpacerComponent,
-    SectionHeaderComponent
+    SpacerComponent
   ],
+
   imports: [
     HttpClientModule,
     BrowserModule,

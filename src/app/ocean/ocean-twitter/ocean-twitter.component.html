@@ -1,15 +1,12 @@
-<nav mat-tab-nav-bar class="topnav">
-    <div class="header-small vertical-center" fxFlex>
-        TRY YOURSELF
-    </div>
-    <div fxFlex class="vertical-center">
-        <mat-form-field fxFlex>
-            <input class="input-twitter" matInput placeholder="Enter your twitter name" [(ngModel)]="twitterName" name="twitterName"
-            />
-        </mat-form-field>
-        <button mat-raised-button class="button-small" (click)="getOcean()"></button>
-    </div>
-</nav>
+<app-section-header title="TRY YOURSELF">
+    <mat-form-field fxFlex>
+        <input class="input-twitter" matInput 
+        placeholder="Enter your twitter name" 
+        [(ngModel)]="twitterName" name="twitterName"
+        />
+    </mat-form-field>
+    <button mat-raised-button class="button-small" (click)="getOcean()"></button>
+</app-section-header>
 
 <div fxLayout="row" style="padding-top:50px;">
     <div class="advert vertical-center">

@@ -13,8 +13,11 @@ export class OceanProfileComponent implements OnInit {
   public scoreLabels: string[] = ['Openness', 'Conscientiousness',
     'Extraversion', 'Agreeableness', 'Neuroticism'];
 
+  public profile: Profile = <Profile>{ prof: ['Rosetta Miller'],
+      info: [{age: '29', occupation: 'housewife', description: ''}]};
   public loading = false;
-  public profileAdvertBackground = 'https://picsum.photos/450/375/?random';
+  public error = '';
+  public profileAdvertBackground = '';
   constructor(
       private oceanService: OceanService,
       private oceanStore: OceanStoreService
@@ -27,15 +30,25 @@ export class OceanProfileComponent implements OnInit {
     this.loading = true;
     this.profileAdvertBackground = '';
     this.oceanService.getProfile(this.score)
-    .subscribe(val => {
+    .subscribe((profile: Profile) => {
       this.loading = false;
-      console.log(val);
-      this.profileAdvertBackground =  'https://picsum.photos/450/375/?random';
+      console.log(profile);
+      this.profile = profile;
+      this.profileAdvertBackground = `/assets/img/ads/${profile.prof[0]}.png`;
     },
     error => {
       this.loading = false;
-      console.log('ERRROR');
-      this.profileAdvertBackground =  'https://picsum.photos/450/375/?random';
     });
   }
+}
+
+export class Profile {
+  info: Information[];
+  prof: string[];
+}
+
+export class Information {
+  occupation: string;
+  age: string;
+  description: string;
 }
