@@ -18,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
 import { SpacerComponent } from '../spacer/spacer.component';
 import { ChartsModule } from 'ng2-charts';
 import { AvatarComponent } from './avatar/avatar.component';
+import { DescriptionComponent } from '../description/description.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { AvatarComponent } from './avatar/avatar.component';
   declarations: [
     OceanProfileComponent,
     OceanTwitterComponent,
-    AvatarComponent
+    AvatarComponent,
+    DescriptionComponent
   ],
   exports: [
     OceanProfileComponent,

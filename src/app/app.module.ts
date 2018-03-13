@@ -11,6 +11,7 @@ import { ConsumersBehaviorComponent } from '../app/consumers-behavior/consumers-
 import { ConsumersProfileComponent } from '../app/consumers-profile/consumers-profile.component';
 import { SocialMediaComponent } from '../app/social-media/social-media.component';
 import { SectionHeaderComponent } from '../app/section-header/section-header.component';
+import { DescriptionComponent } from '../app/description/description.component';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
