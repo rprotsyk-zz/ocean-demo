@@ -51,33 +51,18 @@ export class OceanTwitterComponent implements OnInit {
       .subscribe(response => {
         if (response.scores.length > 0) {
           this.radarChartData = [
-            { data: [response.scores[0].Score,
-              response.scores[1].Score,
-              response.scores[2].Score,
-              response.scores[3].Score,
-              response.scores[4].Score], label: '' }
+            { data: [response.scores[0].score,
+              response.scores[1].score,
+              response.scores[2].score,
+              response.scores[3].score,
+              response.scores[4].score], label: '' }
           ];
         }
         this.loading = false;
-        this.oceanAdvertBackground = `/assets/img/ads/${response.prof}.png`;
+        this.oceanAdvertBackground = `/assets/img/ads/${response.prof}.jpg`;
       },
       error => {
-        this.radarChartData = [
-          { data: [10, 20, 10, 20, 30], label: '' }
-        ];
         this.loading = false;
       });
-  }
-
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
-
-  public scroll(el) {
-    el.scrollIntoView();
   }
 }

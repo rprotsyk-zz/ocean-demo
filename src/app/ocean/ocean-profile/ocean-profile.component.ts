@@ -34,7 +34,7 @@ export class OceanProfileComponent implements OnInit {
       this.loading = false;
       console.log(profile);
       this.profile = profile;
-      this.profileAdvertBackground = `/assets/img/ads/${profile.prof[0]}.png`;
+      this.profileAdvertBackground = `/assets/img/ads/${profile.prof[0]}.jpg`;
     },
     error => {
       this.loading = false;
