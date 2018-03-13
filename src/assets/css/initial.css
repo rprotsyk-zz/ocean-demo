@@ -82,6 +82,11 @@
     margin: 0 44px;
 }
 
+.loading-container {
+    width: 1024px;
+    height: 600px;
+}
+
 .avatar {
     border-radius: 50%;
     width: 80px;

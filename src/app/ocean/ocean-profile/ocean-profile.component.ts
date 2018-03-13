@@ -14,10 +14,10 @@ export class OceanProfileComponent implements OnInit {
     'Extraversion', 'Agreeableness', 'Neuroticism'];
 
   public profile: Profile = <Profile>{ prof: ['Rosetta Miller'],
-      info: [{age: '29', occupation: 'housewife', description: ''}]};
+      info: [{age: '29', occupation: 'Housewife', description: ''}]};
   public loading = false;
   public error = '';
-  public profileAdvertBackground = '';
+  public profileAdvertBackground = `/assets/img/ads/Rosetta Miller.jpg`;
   constructor(
       private oceanService: OceanService,
       private oceanStore: OceanStoreService

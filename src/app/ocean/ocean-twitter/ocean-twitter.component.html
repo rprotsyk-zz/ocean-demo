@@ -1,28 +1,44 @@
 <app-section-header title="TRY YOURSELF">
     <mat-form-field fxFlex>
-        <input class="input-twitter" matInput 
-        placeholder="Enter your twitter name" 
-        [(ngModel)]="twitterName" name="twitterName"
+        <input class="input-twitter" matInput placeholder="Enter your twitter name" [(ngModel)]="twitterName" name="twitterName"
         />
     </mat-form-field>
     <button mat-raised-button class="button-small" (click)="getOcean()"></button>
 </app-section-header>
-
-<div fxLayout="row" style="padding-top:50px;">
-    <div class="advert vertical-center">
-        <img [src]="oceanAdvertBackground" />
-        <div class="horizontal-center" *ngIf="loading">
+<div fxLayout="row" *ngIf="loading">
+    <div class="loading-container vertical-center">
+        <div class="horizontal-center">
             <mat-spinner></mat-spinner>
         </div>
     </div>
-    <div class="vertical-center">
-        <div class="horizontal-center">
-            <canvas baseChart [options]="chartOptions" [colors]="chartColors" [datasets]="radarChartData" width="500" height="300" [labels]="radarChartLabels"
-                [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+</div>
+<div *ngIf="!loading && message != '' ">
+    <div style="padding-bottom: 150px; padding-top: 100px;">
+        <div *ngIf="messageImage != ''" class="message-image horizontal-center">
+            <img src="/assets/img/{{messageImage}}.svg">
+        </div>
+        <div *ngIf="message != ''" class="message horizontal-center">
+            {{message}}
+        </div>
+        <div *ngIf="messageHint !=''" class="message-hint horizontal-center">
+            {{messageHint}}
         </div>
     </div>
 </div>
-<div class="text-container">
+<div *ngIf="message == '' && !loading">
+    <div fxLayout="row" style="padding-top:50px;" *ngIf="radarChartData[0].data.length > 0">
+        <div class="advert vertical-center">
+            <img [src]="oceanAdvertBackground" />
+        </div>
+        <div class="vertical-center">
+            <div class="horizontal-center">
+                <canvas baseChart [options]="chartOptions" [colors]="chartColors" [datasets]="radarChartData" width="500" height="300" [labels]="radarChartLabels"
+                    [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-container" *ngIf="message == '' && !loading">
     <div class="text-header">
         Description
     </div>

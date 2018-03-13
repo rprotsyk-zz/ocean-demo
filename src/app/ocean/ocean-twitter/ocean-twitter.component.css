@@ -32,3 +32,39 @@
     text-align: left;
     color: #000000;
 }
+
+.message {
+  width: 460px;
+  height: 32px;
+  opacity: 0.5;
+  font-family: 'Proxima Nova Bl';
+  font-size: 26px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  padding: 20px;
+}
+
+.message-hint {
+  width: 460px;
+  height: 24px;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00b089;
+  padding: 30px;
+}
+
+.message-image {
+  width: 220px;
+  height: 210px;
+}

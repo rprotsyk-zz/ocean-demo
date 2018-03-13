@@ -16,7 +16,6 @@ export class OceanService {
     const request = {
       user: user
     };
-    console.log(user);
     return this.httpClient
       .post('https://cors-anywhere.herokuapp.com/http://195.160.232.94:5656/get_ocean', 
       request, { responseType: 'json' });
