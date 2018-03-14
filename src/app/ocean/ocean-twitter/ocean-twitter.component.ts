@@ -56,11 +56,11 @@ export class OceanTwitterComponent implements OnInit {
       .subscribe((profile: Profile) => {
         this.profile = profile;
         if (profile.scores.length > 0) {
-          this.radarChartData[0].data = [profile.scores[0].score,
-            profile.scores[1].score,
-            profile.scores[2].score,
-            profile.scores[3].score,
-            profile.scores[4].score] ;
+          this.radarChartData[0].data = [profile.scores[0].percentile,
+            profile.scores[1].percentile,
+            profile.scores[2].percentile,
+            profile.scores[3].percentile,
+            profile.scores[4].percentile] ;
 
           this.message = '';
           this.messageHint = '';
