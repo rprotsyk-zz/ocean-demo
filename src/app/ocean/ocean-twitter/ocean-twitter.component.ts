@@ -71,7 +71,8 @@ export class OceanTwitterComponent implements OnInit {
             this.messageHint = 'Please check if it’s correct and enter again';
             this.messageImage = 'try-no-account';
           }
-          if (profile.status[0] === 'Not enought data to extract OCEAN') {
+          if (profile.status[0] === 'Not enought data to extract OCEAN' ||
+              profile.status[0] === 'Provided user has no self-written tweets') {
             this.message = 'It seems it’s not enough text to analyze right now. ';
             this.messageHint = 'We could try to check another account';
             this.messageImage = 'try-not-enough-info';
