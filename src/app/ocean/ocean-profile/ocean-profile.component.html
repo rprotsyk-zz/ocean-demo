@@ -1,11 +1,8 @@
-<nav mat-tab-nav-bar class="topnav">
-    <div class="header-small" fxFlex>
-        SEE THE DIFFERENCE
-    </div>
-    <div fxFlex>
-        <app-avatar></app-avatar>
-    </div>
-</nav>
+<app-section-header title="SEE THE DIFFERENCE">
+    <app-avatar [(age)]="profile.info[0].age" 
+    [(occupation)]="profile.info[0].occupation"
+    [(prof)]="profile.prof[0]"></app-avatar>
+</app-section-header>
 
 <div fxLayout="row" style="padding-top:50px;">
     <div class="advert vertical-center">
@@ -39,10 +36,7 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 </div>
 <app-description></app-description>

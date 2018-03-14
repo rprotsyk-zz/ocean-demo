@@ -1,0 +1,33 @@
+.text-header {
+    width: 1024px;
+    height: 90px;
+    background-color: #00b089;
+    font-family: 'Proxima Nova Bl';
+    font-size: 26px;
+    line-height: normal;
+    text-align: left;
+    color: #ffffff;
+    padding: 32px 42px 36px;
+    box-sizing: border-box;
+    &.opened {
+        background: #000;
+    }
+}
+
+.arrow {
+    &.opened {
+        transform: rotate(180deg);
+    }
+}
+
+.text {
+    height: 0;
+    overflow: hidden;
+    transition: .3s height;
+    padding: 0 42px;
+    &.opened {
+        height: 200px;
+        color: #fff;
+        background: #000;
+    }
+}

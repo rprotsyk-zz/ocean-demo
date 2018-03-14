@@ -1,11 +1,11 @@
 .block-wrapper {
     width: 100%;
-    height: 668px;
+    height: 768px;
     background-color: #000000;
-    // background-image: url('http://via.placeholder.com/680x480');
+    background-image: url('../../assets/img/posts.svg');
     background-repeat: no-repeat;
-    background-position: 95% 0;
-    background-size: 490px 100%;
+    background-position: 38px 73px;
+    background-size: 420px 590px;
 }
 
 .icon-wrapper {
@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.line {
+    width: 300px;
+}
+
 .header-title {
     width: 715px;
     height: 82px;
@@ -24,7 +28,7 @@
     font-weight: 900;
     line-height: 0.82;
     color: #fff;
-    padding-top: 35px;
+    padding-top: 109px;
     margin-left: -6px;
 }
 

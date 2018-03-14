@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="403px" height="297px" viewBox="0 0 403 297" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>72D95C45-BA0B-4FA1-B76B-7E8819DBFF6C</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="UI-OCEAN--presentation-site-long" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="OCEAN-site-02-page-05" transform="translate(-111.000000, -2637.000000)">
+            <g id="04-psychometric-title" transform="translate(0.000000, 2304.000000)">
+                <g id="spider-illustration" transform="translate(110.000000, 330.000000)">
+                    <path d="M185,49.7082039 L78.2041556,127.299927 L118.996538,252.845971 L251.003462,252.845971 L291.795844,127.299927 L185,49.7082039 Z" id="Polygon" stroke="#000000" stroke-width="6"></path>
+                    <path d="M185,77.854102 L104.972495,135.997488 L135.540282,230.075462 L234.459718,230.075462 L265.027505,135.997488 L185,77.854102 Z" id="Polygon-Copy" stroke="#616161" stroke-width="3" opacity="0.5"></path>
+                    <path d="M185,107.854102 L133.504191,145.267997 L153.17384,205.804952 L216.82616,205.804952 L236.495809,145.267997 L185,107.854102 Z" id="Polygon-Copy-2" stroke="#616161" stroke-width="3" opacity="0.300000012"></path>
+                    <path d="M185,137.854102 L162.035886,154.538507 L170.807397,181.534442 L199.192603,181.534442 L207.964114,154.538507 L185,137.854102 Z" id="Polygon-Copy-3" stroke="#616161" stroke-width="3" opacity="0.200000003"></path>
+                    <circle id="Oval" fill="#D51B5D" cx="186" cy="25" r="5"></circle>
+                    <circle id="Oval-Copy" fill="#F36E24" cx="321" cy="119" r="5"></circle>
+                    <circle id="Oval-Copy-2" fill="#00B089" cx="51" cy="119" r="5"></circle>
+                    <circle id="Oval-Copy-4" fill="#00A6CE" cx="268" cy="272" r="5"></circle>
+                    <circle id="Oval-Copy-3" fill="#EE4D9B" cx="100" cy="272" r="5"></circle>
+                    <polygon id="Polygon-Copy-4" stroke="#D51B5D" stroke-width="8" stroke-linejoin="round" points="186.311795 154.901747 235.322556 144.154029 193.494054 169.976502 146.458691 215.529248 75.6774441 129.154029"></polygon>
+                    <text id="Openness" font-family="ProximaNova-Extrabld, Proxima Nova" font-size="14" font-weight="600" fill="#000000">
+                        <tspan x="155.265" y="13">Openness</tspan>
+                    </text>
+                    <text id="Neuroticism" font-family="ProximaNova-Extrabld, Proxima Nova" font-size="14" font-weight="600" fill="#000000">
+                        <tspan x="0.852" y="102">Neuroticism</tspan>
+                    </text>
+                    <text id="Conscientiousness" font-family="ProximaNova-Extrabld, Proxima Nova" font-size="14" font-weight="600" fill="#000000">
+                        <tspan x="283" y="101">Conscientiousness</tspan>
+                    </text>
+                    <text id="Extraversion" font-family="ProximaNova-Extrabld, Proxima Nova" font-size="14" font-weight="600" fill="#000000">
+                        <tspan x="232" y="297">Extraversion</tspan>
+                    </text>
+                    <text id="Agreeableness" font-family="ProximaNova-Extrabld, Proxima Nova" font-size="14" font-weight="600" fill="#000000">
+                        <tspan x="59.478" y="297">Agreeableness</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

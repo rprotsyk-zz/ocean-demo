@@ -1,0 +1,27 @@
+.title {
+    width: 944px;
+    height: 82px;
+    font-family: 'Proxima Nova Bl';
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 0.82;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 50px 42px 0;
+    border-top: 1px solid #979797;
+}
+
+.list {
+    margin: 202px 0 292px;
+}
+
+.list li {
+    width: 940px;
+    padding: 0 42px;
+    list-style-type: circle;
+    font-family: 'Open Sans';
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: left;
+    color: #000000;
+}

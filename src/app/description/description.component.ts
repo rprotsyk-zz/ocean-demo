@@ -9,6 +9,12 @@ export class DescriptionComponent implements OnInit {
 
   constructor() { }
 
+  public isOpened = false;
+
+  public toggleState() {
+    this.isOpened = !this.isOpened;
+  }
+
   ngOnInit() {}
 
 }

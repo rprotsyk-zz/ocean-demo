@@ -1,8 +1,9 @@
-<div class="text-container">
-    <div class="text-header">
-        Description
+<div>
+    <div class="text-header" [class.opened]="isOpened">
+        Recommended Advertisement Approach
+        <img src="../../assets/img/icon-arrow.svg" (click)="toggleState()" [class.opened]="isOpened" class="arrow">
     </div>
-    <div class="text" style="margin-bottom:30px;">
+    <div class="text" [class.opened]="isOpened">
         Michael is demanding and meticulous person. Michael works as a senior regional manager in the logistics company. Michaels
         position in the company implies a lot of business traveling to coordinate shipping and logistics throughout the Western
         regions of US. In college Michael played in College football league and he still enjoys playing football with friends

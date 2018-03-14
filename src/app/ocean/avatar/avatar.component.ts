@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {OceanService} from '../ocean.service';
 import {OceanStoreService} from '../ocean.store';
 
@@ -13,6 +13,13 @@ export class AvatarComponent implements OnInit {
       private oceanService: OceanService,
       private oceanStore: OceanStoreService
   ) {}
+
+  @Input()
+  public prof: string;
+  @Input()
+  public age: string;
+  @Input()
+  public occupation: string;
 
   ngOnInit() {
   }

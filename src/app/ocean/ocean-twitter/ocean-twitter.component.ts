@@ -21,8 +21,8 @@ export class OceanTwitterComponent implements OnInit {
   ];
   public radarChartType = 'radar';
   public loading = false;
-  public oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
-  public twitterName = 'elonmusk';
+  public oceanAdvertBackground = '';
+  public twitterName = 'Enter your twitter name';
   public chartColors: Array<Color> = [{
     borderColor: '#d51b5d'
   }];
@@ -66,8 +66,6 @@ export class OceanTwitterComponent implements OnInit {
           { data: [10, 20, 10, 20, 30], label: '' }
         ];
         this.loading = false;
-        console.log('ERRROR');
-        this.oceanAdvertBackground = 'https://picsum.photos/450/375/?random';
       });
   }
 

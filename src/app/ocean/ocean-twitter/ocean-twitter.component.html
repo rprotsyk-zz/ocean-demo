@@ -1,15 +1,12 @@
-<nav mat-tab-nav-bar class="topnav">
-    <div class="header-small vertical-center" fxFlex>
-        TRY YOURSELF
-    </div>
-    <div fxFlex class="vertical-center">
-        <mat-form-field fxFlex>
-            <input class="input-twitter" matInput placeholder="Enter your twitter name" [(ngModel)]="twitterName" name="twitterName"
-            />
-        </mat-form-field>
-        <button mat-raised-button class="button-small" (click)="getOcean()"></button>
-    </div>
-</nav>
+<app-section-header title="TRY YOURSELF">
+    <mat-form-field fxFlex>
+        <input class="input-twitter" matInput 
+        placeholder="Enter your twitter name" 
+        [(ngModel)]="twitterName" name="twitterName"
+        />
+    </mat-form-field>
+    <button mat-raised-button class="button-small" (click)="getOcean()"></button>
+</app-section-header>
 
 <div fxLayout="row" style="padding-top:50px;">
     <div class="advert vertical-center">
@@ -23,19 +20,5 @@
             <canvas baseChart [options]="chartOptions" [colors]="chartColors" [datasets]="radarChartData" width="500" height="300" [labels]="radarChartLabels"
                 [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
         </div>
-    </div>
-</div>
-<div class="text-container">
-    <div class="text-header">
-        Description
-    </div>
-    <div class="text" style="margin-bottom:30px;">
-        Michael is demanding and meticulous person. Michael works as a senior regional manager in the logistics company. Michaels
-        position in the company implies a lot of business traveling to coordinate shipping and logistics throughout the Western
-        regions of US. In college Michael played in College football league and he still enjoys playing football with friends
-        on weekends as well as watching Super Bowl. Michael prefers expensive and qualitative apparel that represents his
-        financial status. Due to his work he is interested in online shopping and trusts certain brands. Michael believes
-        that his spare time is priceless and doesn’t like spending too much time on shopping, so he values fast and clear
-        experience when shopping online.
     </div>
 </div>
