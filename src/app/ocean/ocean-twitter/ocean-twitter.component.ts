@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { OceanService } from '../ocean.service';
 import { OceanStoreService } from '../ocean.store';
 import { Color } from 'ng2-charts';
+import { Profile } from '../ocean-profile/ocean-profile.component';
 
 @Component({
   selector: 'app-ocean-twitter',
@@ -13,14 +14,18 @@ export class OceanTwitterComponent implements OnInit {
   public radarChartLabels: string[] = ['Openness', 'Conscientiousness',
     'Extraversion', 'Agreeableness', 'Neuroticism'];
 
+  public message = 'Here you’ll see your OCEAN scores';
+  public messageHint = '';
+  public messageImage = 'try-empty';
   public radarChartData: any = [
     {
-      data: [30, 20, 50, 20, 10], label: '', borderWidth: '8',
+      data: [], label: '', borderWidth: '8',
       pointStyle: 'circle'
     }
   ];
   public radarChartType = 'radar';
   public loading = false;
+  public profile: Profile;
   public oceanAdvertBackground = '';
   public twitterName = 'Enter your twitter name';
   public chartColors: Array<Color> = [{
@@ -48,36 +53,40 @@ export class OceanTwitterComponent implements OnInit {
     this.loading = true;
     this.oceanAdvertBackground = '';
     this.oceanService.getOcean(this.twitterName)
-      .subscribe(response => {
-        if (response.scores.length > 0) {
-          this.radarChartData = [
-            { data: [response.scores[0].Score,
-              response.scores[1].Score,
-              response.scores[2].Score,
-              response.scores[3].Score,
-              response.scores[4].Score], label: '' }
-          ];
+      .subscribe((profile: Profile) => {
+        this.profile = profile;
+        if (profile.scores.length > 0) {
+          this.radarChartData[0].data = [profile.scores[0].score,
+            profile.scores[1].score,
+            profile.scores[2].score,
+            profile.scores[3].score,
+            profile.scores[4].score] ;
+
+          this.message = '';
+          this.messageHint = '';
+          this.messageImage = '';
+        } else {
+          if (profile.status[0] === 'User is not found') {
+            this.message = 'Hmmm.. it seems there is no account with this name';
+            this.messageHint = 'Please check if it’s correct and enter again';
+            this.messageImage = 'try-no-account';
+          }
+          if (profile.status[0] === 'Not enought data to extract OCEAN') {
+            this.message = 'It seems it’s not enough text to analyze right now. ';
+            this.messageHint = 'We could try to check another account';
+            this.messageImage = 'try-not-enough-info';
+          }
         }
         this.loading = false;
-        this.oceanAdvertBackground = `/assets/img/ads/${response.prof}.png`;
+        this.oceanAdvertBackground = `/assets/img/ads/${profile.prof[0]}.jpg`;
       },
       error => {
-        this.radarChartData = [
-          { data: [10, 20, 10, 20, 30], label: '' }
-        ];
         this.loading = false;
+        if ((<any>error).statusText === 'Unknown Error') {
+            this.message = 'Ooops.. It seems something went wrong.';
+            this.messageHint = 'Re-send your request';
+            this.messageImage = 'try-error';
+        }
       });
-  }
-
-  public chartClicked(e: any): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any): void {
-    console.log(e);
-  }
-
-  public scroll(el) {
-    el.scrollIntoView();
   }
 }
