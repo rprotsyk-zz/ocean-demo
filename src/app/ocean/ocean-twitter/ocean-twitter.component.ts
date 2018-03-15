@@ -56,11 +56,11 @@ export class OceanTwitterComponent implements OnInit {
       .subscribe((profile: Profile) => {
         this.profile = profile;
         if (profile.scores.length > 0) {
-          this.radarChartData[0].data = [profile.scores[0].score,
-            profile.scores[1].score,
-            profile.scores[2].score,
-            profile.scores[3].score,
-            profile.scores[4].score] ;
+          this.radarChartData[0].data = [profile.scores[0].percentile,
+            profile.scores[1].percentile,
+            profile.scores[2].percentile,
+            profile.scores[3].percentile,
+            profile.scores[4].percentile] ;
 
           this.message = '';
           this.messageHint = '';
@@ -71,7 +71,8 @@ export class OceanTwitterComponent implements OnInit {
             this.messageHint = 'Please check if it’s correct and enter again';
             this.messageImage = 'try-no-account';
           }
-          if (profile.status[0] === 'Not enought data to extract OCEAN') {
+          if (profile.status[0] === 'Not enought data to extract OCEAN' ||
+              profile.status[0] === 'Provided user has no self-written tweets') {
             this.message = 'It seems it’s not enough text to analyze right now. ';
             this.messageHint = 'We could try to check another account';
             this.messageImage = 'try-not-enough-info';
