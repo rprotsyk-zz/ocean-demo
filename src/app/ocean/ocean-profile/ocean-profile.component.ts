@@ -46,7 +46,7 @@ export class OceanProfileComponent implements OnInit {
       .subscribe((profile: Profile) => {
         this.loading = false;
         this.profile = profile;
-        this.profileAdvertBackground = `/assets/img/ads/${profile.prof[0]}.jpg`;
+        this.profileAdvertBackground = `/assets/img/asd/${profile.prof[0]}.jpg`;
       },
       error => {
         this.loading = false;
