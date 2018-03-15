@@ -16,7 +16,7 @@
 .metric-number {
     width: 29px;
     height: 29px;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova Rg';
     font-size: 24px;
     font-weight: 300;
     font-style: normal;
@@ -49,4 +49,10 @@
     position: absolute;
     bottom: 0;
     z-index: 1;
+}
+
+.slider_0 .mat-accent .mat-slider-thumb,
+.slider_0 .mat-accent .mat-slider-thumb-label,
+.slider_0 .mat-accent .mat-slider-track-fill {
+    background: #000000;
 }

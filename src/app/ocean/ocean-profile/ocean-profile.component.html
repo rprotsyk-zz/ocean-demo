@@ -28,8 +28,8 @@
                             </div>
                         </div>
                         <div fxLayout="row">
-                            <div fxFlex>
-                                <mat-slider fxFlex (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[i]" [max]="99" [min]="1" [step]="1">
+                            <div fxFlex [class]="'slider_' + i">
+                                <mat-slider fxFlex  (change)="getProfile()" thumbLabel="true" [(ngModel)]="score.scores[i]" [max]="99" [min]="1" [step]="1">
                                 </mat-slider>
                             </div>
                         </div>
