@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-description',
@@ -9,6 +9,7 @@ export class DescriptionComponent implements OnInit {
 
   constructor() { }
 
+  @Input() text: string;
   public isOpened = false;
 
   public toggleState() {

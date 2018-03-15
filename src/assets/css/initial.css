@@ -140,3 +140,7 @@
     align-items: center;
     justify-items: center;
 }
+
+.fp-tableCell {
+    position: relative;
+}
