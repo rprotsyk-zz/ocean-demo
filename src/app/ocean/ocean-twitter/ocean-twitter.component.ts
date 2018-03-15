@@ -29,7 +29,8 @@ export class OceanTwitterComponent implements OnInit {
   public oceanAdvertBackground = '';
   public twitterName = '';
   public chartColors: Array<Color> = [{
-    borderColor: '#d51b5d'
+    borderColor: '#d51b5d',
+    backgroundColor: 'transparent',
   }];
 
   public chartOptions = {
@@ -38,6 +39,9 @@ export class OceanTwitterComponent implements OnInit {
         fontSize: 14,
         fontFamily: 'Open Sans'
       }
+    },
+    legend: {
+      display: false
     }
   };
 
