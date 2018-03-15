@@ -1,6 +1,6 @@
 * {
     font-size: 100%;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova Rg';
 }
 
 .topnav {
@@ -11,7 +11,7 @@
 
 .header {
     height: 122px;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova Rg';
     font-size: 100px;
     font-weight: 900;
     font-style: normal;
@@ -25,7 +25,7 @@
 .header-small {
     width: 308px;
     height: 82px;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova Rg';
     font-size: 50px;
     font-weight: 900;
     font-style: normal;
@@ -38,7 +38,7 @@
 
 .text-header {
     height: 32px;
-    font-family: 'Proxima Nova';
+    font-family: 'Proxima Nova Rg';
     font-size: 26px;
     font-weight: bold;
     font-style: normal;
@@ -143,4 +143,33 @@
 
 .fp-tableCell {
     position: relative;
+}
+
+
+
+
+.slider_0 .mat-accent .mat-slider-thumb,
+.slider_0 .mat-accent .mat-slider-thumb-label,
+.slider_0 .mat-accent .mat-slider-track-fill {
+    background: #d51b5d;
+}
+.slider_1 .mat-accent .mat-slider-thumb,
+.slider_1 .mat-accent .mat-slider-thumb-label,
+.slider_1 .mat-accent .mat-slider-track-fill {
+    background: #f36e24;
+}
+.slider_2 .mat-accent .mat-slider-thumb,
+.slider_2 .mat-accent .mat-slider-thumb-label,
+.slider_2 .mat-accent .mat-slider-track-fill {
+    background: #00a6ce;
+}
+.slider_3 .mat-accent .mat-slider-thumb,
+.slider_3 .mat-accent .mat-slider-thumb-label,
+.slider_3 .mat-accent .mat-slider-track-fill {
+    background: #ee4d9b;
+}
+.slider_4 .mat-accent .mat-slider-thumb,
+.slider_4 .mat-accent .mat-slider-thumb-label,
+.slider_4 .mat-accent .mat-slider-track-fill {
+    background: #00b089;
 }
