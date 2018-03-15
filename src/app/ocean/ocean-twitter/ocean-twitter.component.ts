@@ -27,7 +27,7 @@ export class OceanTwitterComponent implements OnInit {
   public loading = false;
   public profile: Profile;
   public oceanAdvertBackground = '';
-  public twitterName = 'Enter your twitter name';
+  public twitterName = '';
   public chartColors: Array<Color> = [{
     borderColor: '#d51b5d'
   }];
