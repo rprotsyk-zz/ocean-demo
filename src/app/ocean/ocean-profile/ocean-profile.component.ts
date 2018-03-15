@@ -30,7 +30,7 @@ export class OceanProfileComponent implements OnInit {
   };
   public loading = false;
   public error = '';
-  public profileAdvertBackground = `/assets/img/ads/Rosetta Miller.jpg`;
+  public profileAdvertBackground = `/assets/img/asd/Rosetta Miller.jpg`;
   constructor(
     private oceanService: OceanService,
     private oceanStore: OceanStoreService
