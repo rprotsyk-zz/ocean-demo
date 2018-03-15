@@ -68,3 +68,9 @@
   width: 220px;
   height: 210px;
 }
+
+.description {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}

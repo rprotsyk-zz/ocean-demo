@@ -40,3 +40,6 @@
         </div>
     </div>
 </div>
+<div *ngIf="message == '' && !loading">
+<app-description [text]="profile.info[0].description" class="description"></app-description>
+</div>
