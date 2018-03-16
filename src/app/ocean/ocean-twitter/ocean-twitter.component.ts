@@ -65,7 +65,8 @@ export class OceanTwitterComponent implements OnInit {
             profile.scores[2].percentile,
             profile.scores[3].percentile,
             profile.scores[4].percentile] ;
-
+          const img = profile.prof[0].replace(' ', '');
+          this.oceanAdvertBackground = `/assets/img/asd/${img}.jpg`;
           this.message = '';
           this.messageHint = '';
           this.messageImage = '';
@@ -83,8 +84,6 @@ export class OceanTwitterComponent implements OnInit {
           }
         }
         this.loading = false;
-        const img = profile.prof[0].replace(' ', '');
-        this.oceanAdvertBackground = `/assets/img/asd/${img}.jpg`;
       },
       error => {
         this.loading = false;
