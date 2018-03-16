@@ -22,11 +22,19 @@ export class OceanProfileComponent implements OnInit {
       dental clinic, so their family can easily afford spending couple
       hundreds for clothing. This is also a reason why she sometimes treats
       her friends outwardly, and may be a bit bossy and impatient. Although
-      she seems to be outgoing, she is quite self-centered and has has to hide
+      she seems to be outgoing, she is quite self-centered and has to hide
       it behind her compulsive actions. As a good housewife Rosetta is
       concerned with the quality and prefers fast delivery. She likes to impress
       her friends and neighbours, she prefers modern design and fashionable goods
-      to complement her status and stay comfortable at the same time.`}]
+      to complement her status and stay comfortable at the same time.`,
+      add_preferences: `Due to high Neuroticism, the transformational and comparative ads should 
+      drive more attention of consumers with such profiles. This trait also means that the red 
+      and purple colors have better influence on the person. 
+      Low Openness also suggests that consumer might better react to a good-looking design and 
+      style of the product and is less concerned about the functionality and features. It also 
+      suggests that consumer would be attracted to options of free-return policy or ability to see 
+      the product in local shop. 
+      Low Extraversion also defines that person would care less about the fashion and popularity of a particular brand.`}]
   };
   public loading = false;
   public error = '';
@@ -65,6 +73,7 @@ export class Information {
   occupation: string;
   age: string;
   description: string;
+  add_preferences: string;
 }
 
 export class ScoreResult {
