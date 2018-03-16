@@ -7,12 +7,8 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes)
-  ],
-  exports: [
-    RouterModule
-  ],
+  imports: [RouterModule.forRoot(appRoutes, { useHash: false })],
+  exports: [RouterModule],
   providers: [
   ]
 })
