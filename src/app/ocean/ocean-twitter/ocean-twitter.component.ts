@@ -83,7 +83,8 @@ export class OceanTwitterComponent implements OnInit {
           }
         }
         this.loading = false;
-        this.oceanAdvertBackground = `/assets/img/asd/${profile.prof[0]}.jpg`;
+        const img = profile.prof[0].replace(' ', '');
+        this.oceanAdvertBackground = `/assets/img/asd/${img}.jpg`;
       },
       error => {
         this.loading = false;

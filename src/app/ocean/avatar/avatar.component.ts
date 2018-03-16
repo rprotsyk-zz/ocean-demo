@@ -17,6 +17,8 @@ export class AvatarComponent implements OnInit {
   @Input()
   public prof: string;
   @Input()
+  public profImage: string;
+  @Input()
   public age: string;
   @Input()
   public occupation: string;
