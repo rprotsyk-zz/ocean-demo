@@ -1,7 +1,7 @@
 <div>
-    <div class="text-header" [class.opened]="isOpened">
+    <div class="text-header" [class.opened]="isOpened" (click)="toggleState()">
         Recommended Advertisement Approach
-        <img src="../../assets/img/icon-arrow.svg" (click)="toggleState()" [class.opened]="isOpened" class="arrow">
+        <img src="../../assets/img/icon-arrow.svg" [class.opened]="!isOpened" class="arrow">
     </div>
     <div class="text" [class.opened]="isOpened" [innerHTML]=text></div>
 </div>

@@ -173,3 +173,13 @@
 .slider_4 .mat-accent .mat-slider-track-fill {
     background: #00b089;
 }
+
+.slider_0 .mat-slider-thumb,
+.slider_1 .mat-slider-thumb,
+.slider_2 .mat-slider-thumb,
+.slider_3 .mat-slider-thumb,
+.slider_4 .mat-slider-thumb, {
+    width: 24px;
+    height: 24px;
+    bottom: -12px;
+}
