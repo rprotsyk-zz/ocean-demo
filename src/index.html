@@ -1,27 +1,35 @@
 <!doctype html>
 <html>
+
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115926575-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115926575-1');
+  </script>
   <base href="">
   <meta charset="utf-8">
   <title>Ocean demo</title>
-  
+
   <!-- Styles required for the loading screen -->
-  <link rel="stylesheet"
-        href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-  <link rel="stylesheet"
-        href="assets/css/initial.css">
-  <link rel="stylesheet"
-        href="assets/fonts/stylesheet.css">
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" href="assets/css/initial.css">
+  <link rel="stylesheet" href="assets/fonts/stylesheet.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-  
+
   <!-- Required to look ok on mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-  
+
+
 </head>
+
 <body>
   <app-root>
     <!-- Loading screen, will be replaced with contents of <app-root> once it's loaded -->
@@ -33,4 +41,5 @@
     </div>
   </app-root>
 </body>
+
 </html>
